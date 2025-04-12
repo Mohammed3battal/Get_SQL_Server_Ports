@@ -1,0 +1,5 @@
+SELECT DISTINCT 
+    local_net_address AS [Local IP], 
+    local_tcp_port AS [Port]
+FROM sys.dm_exec_connections
+WHERE local_net_address IS NOT NULL;
